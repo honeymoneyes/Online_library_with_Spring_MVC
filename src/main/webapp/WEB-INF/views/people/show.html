@@ -22,6 +22,7 @@
 <div th:if="${!books.isEmpty()}">
     <b><p class="line">Books: </p></b>
     <p th:each="book : ${books}"
+       th:style="${book.isCheckDate()} ? 'color:red' : 'color:black'"
        th:text="${book.getName() + ', ' + book.getAuthor() + ', ' + book.getYear()}"></p>
 
 </div>
